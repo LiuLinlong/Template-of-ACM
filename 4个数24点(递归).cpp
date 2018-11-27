@@ -3,9 +3,9 @@ using namespace std;
 double a[5];
 #define EPS  1e-6
 bool iszero(double x){
-	return fabs(x) <= EPS;//fabsÇó¾ø¶ÔÖµ 
+	return fabs(x) <= EPS;//fabsæ±‚æµ®ç‚¹æ•°ç»å¯¹å€¼ 
 }
-bool count24(double a[],int n){//count24:ÓÃÊý×éaÀïµÄn¸öÊý¼ÆËã24 
+bool count24(double a[],int n){//count24:ç”¨æ•°ç»„aé‡Œçš„nä¸ªæ•°è®¡ç®—24 
 	if(n == 1){
 		if(iszero(a[0] - 24))
 		    return true;
@@ -14,11 +14,11 @@ bool count24(double a[],int n){//count24:ÓÃÊý×éaÀïµÄn¸öÊý¼ÆËã24
 	}
 double b[5];
 for(int i = 0;i < n-1; i++)
-	for(int j = i+1;j < n; j++){//Ã¶¾ÙÁ½¸öÊýµÄ×éºÏ 
-		int m = 0;//»¹Ê£ÏÂm¸öÊý£¬m=n-2 
+	for(int j = i+1;j < n; j++){//æžšä¸¾ä¸¤ä¸ªæ•°çš„ç»„åˆ 
+		int m = 0;//è¿˜å‰©ä¸‹mä¸ªæ•°ï¼Œm=n-2 
 		for(int k = 0;k < n; k++)
 		    if(k !=i && k != j)
-			      b[m++] = a[k];//°ÑÆäÓàÊý·ÅÈëb 
+			      b[m++] = a[k];//æŠŠå…¶ä½™æ•°æ”¾å…¥b 
 			b[m] = a[i] + a[j];
 			if(count24(b,m+1))
 			      return true;
