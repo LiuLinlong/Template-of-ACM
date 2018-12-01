@@ -13,6 +13,7 @@ int main()
     {
         cin>>arr[i].s;
     }
+    arr[0].dp=1;
     int maxx = 0, pos;
     for(int i = 0; i < 6; i++)
     {
