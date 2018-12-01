@@ -1,7 +1,6 @@
-/**********************Written By LLL**********************/
 const int maxn=10000;
 int prime[maxn+1];
-void getprime()//prime[0]==ËØÊýµÄ¸öÊý;
+void getprime()//prime[0]==ç´ æ•°çš„ä¸ªæ•°;
 {
     memset(prime,0,sizeof(prime));
     for(int i=2; i<=maxn; i++)
@@ -18,7 +17,7 @@ void getprime()//prime[0]==ËØÊýµÄ¸öÊý;
 }
 long long factor[100][2];
 int fatCnt;
-int getFactors(long long x)//factor[µÚ¼¸+1¸öÖÊÒò×Ó][0]=ÖÊÒò×Ó; factor[µÚ¼¸+1¸öÖÊÒò×Ó][1]=´ËÒò×ÓµÄ¼¸´Î·½;
+int getFactors(long long x)//factor[ç¬¬å‡ +1ä¸ªè´¨å› å­][0]=è´¨å› å­; factor[ç¬¬å‡ +1ä¸ªè´¨å› å­][1]=æ­¤å› å­çš„å‡ æ¬¡æ–¹;
 {
     fatCnt=0;
     long long tmp=x;
@@ -39,7 +38,7 @@ int getFactors(long long x)//factor[µÚ¼¸+1¸öÖÊÒò×Ó][0]=ÖÊÒò×Ó; factor[µÚ¼¸+1¸öÖÊ
     if(tmp!=1)
     {
         factor[fatCnt][0]=tmp;
-        factor[fatCnt++][1]=1;//´ËÊ±×Ô¼Óºó£¬fatCntÕæµÄ±ä³ÉÁË¸öÊý
+        factor[fatCnt++][1]=1;//æ­¤æ—¶è‡ªåŠ åŽï¼ŒfatCntçœŸçš„å˜æˆäº†ä¸ªæ•°
     }
     return fatCnt;
 }
